@@ -1,0 +1,22 @@
+[user]
+    name = geraldarthur
+    email = gerald.a.rich@gmail.com
+[alias]
+    last = cat-file commit HEAD
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'---abbrev-commit
+    st = status -sb
+    br = branch
+    ci = commit
+    co = checkout
+    cob = checkout -b
+    lol = log --graph
+    lola = log --graph --all
+    today = log --author='Gerald Rich' --since=midnight
+    yesterday = log --author='Gerald Rich' --since=yesterday
+    info = show --pretty=fuller --name-status --decorate
+    rp = remote prune       
+    cl = clone
+[color]
+    ui = true
+[push]
+    default = current
