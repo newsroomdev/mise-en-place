@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Make sure we’re using the latest Homebrew
+brew update
+
+# Upgrade any already-installed formulae
+brew update
+
+brew install ack
+brew install bash
+brew install coreutils
+brew install findutils
+brew install ffmpeg
+brew install gdal
+brew install giflib
+brew install gifsicle
+brew install git
+brew install go
+brew install htop-osx
+brew install macvim
+brew install mercurial
+brew install node
+brew install openssl
+brew install pstree
+brew install python
+brew install python3
+brew install rbenv
+brew install ruby-build
+brew install sqlite
+brew install tmux
+brew install valgrind
+brew install wget --enable-iri
+brew install youtube-dl
+
+brew cleanup
