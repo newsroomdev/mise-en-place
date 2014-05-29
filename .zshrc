@@ -69,6 +69,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export PATH=/usr/local/bin:$PATH
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 export GOPATH=$HOME/Code/go
 export EDITOR='vim'
 function powerline_precmd() {
