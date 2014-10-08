@@ -52,15 +52,13 @@ source ~/.bin/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
 # User configuration
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+# export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+for file in ~/.{secrets,exports,aliases,functions}; do
+    [ -r "$file" ] && source "$file"
+done
+unset file
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -68,33 +66,12 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export PATH=/usr/local/bin:$PATH
-source /usr/local/bin/virtualenvwrapper_lazy.sh
-export GOPATH=$HOME/Code/go
-export EDITOR='vim'
-function powerline_precmd() {
-  export PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
 install_powerline_precmd
-
-for file in ~/.{secrets,exports,aliases,functions}; do
-        [ -r "$file" ] && source "$file"
-done
-unset file
 
 export CSICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=gxFxGxDxBxegedabagacad
 
-source /usr/local/bin/virtualenvwrapper_lazy.sh
 eval "$(rbenv init -)"
+eval "$(gh alias -s)"
+disable r

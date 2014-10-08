@@ -3,7 +3,6 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
-
 # find shorthand
 function f() {
     find . -name "$1"
@@ -36,12 +35,10 @@ function server() {
 #   )" | less -F
 # }
 
-
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
-
 
 # Test if HTTP compression (RFC 2616 + SDCH) is enabled for a given URL.
 # Send a fake UA string for sites that sniff it instead of using the Accept-Encoding header. (Looking at you, ajax.googleapis.com!)
@@ -128,7 +125,6 @@ function extract() {
 	fi
 }
 
-
 # animated gifs from any video
 # from alex sexton   gist.github.com/SlexAxton/4989674
 gifify() {
@@ -143,5 +139,18 @@ gifify() {
   else
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
+}
+
+function powerline_precmd() {
+  export PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
 }
 

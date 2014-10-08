@@ -40,6 +40,8 @@ alias rx="brew doctor"
 # python shiz
 alias killpycs="find . -name \*.pyc -delete"
 
+alias node="env NODE_NO_READLINE=1 rlwrap node"
+
 # postgres shiz
 alias pgdown='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 alias pgup='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -53,7 +55,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 # current projects
 alias code="cd ~/Code"
-alias pp="cd ~/Code/propublica"
+alias mp="cd ~/Code/mp"
 
 # GIT STUFF
 # Reset previous commit but keep all changes
