@@ -3,7 +3,7 @@ cd "$(dirname "$0")"
 git pull
 
 # homebrew, vim, zsh
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 curl https://j.mp/spf13-vim3 -L -o - | sh
 curl -L http://install.ohmyz.sh | sh
 
