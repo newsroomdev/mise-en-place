@@ -5,7 +5,7 @@ git pull
 # homebrew, vim, zsh
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 curl https://j.mp/spf13-vim3 -L -o - | sh
-curl -L http://install.ohmyz.sh | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | shß
 
 # the rest
 function doIt() {

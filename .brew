@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Make sure we’re using the latest Homebrew
-brew upgrade
+brew upgrade --all
 
 # Upgrade any already-installed formulae
 brew update
