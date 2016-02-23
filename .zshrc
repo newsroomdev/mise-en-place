@@ -75,3 +75,6 @@ export LSCOLORS=gxFxGxDxBxegedabagacad
 eval "$(rbenv init -)"
 eval "$(gh alias -s)"
 disable r
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

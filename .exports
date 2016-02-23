@@ -1,16 +1,24 @@
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
 source /usr/local/bin/virtualenvwrapper_lazy.sh
+
+export PATH=$PATH:/usr/local/mysql/bin
 export RBENV_ROOT=/usr/local/var/rbenv
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOROOT/bin
 
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR="vim"
-# else
-#   export EDITOR="mvim -vf"
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="vim"
+else
+  export EDITOR="subl"
+fi
 
-# use macvim in terminal
-export EDITOR="mvim -vf"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
+
+export PATH=~/Code/depot_tools:"$PATH"
+export PROJECT_HOME=~/Code
