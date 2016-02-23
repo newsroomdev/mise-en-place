@@ -3,9 +3,9 @@ cd "$(dirname "$0")"
 git pull
 
 # homebrew, vim, zsh
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 curl https://j.mp/spf13-vim3 -L -o - | sh
-curl -L http://install.ohmyz.sh | sh
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | shß
 
 # the rest
 function doIt() {
@@ -25,3 +25,13 @@ fi
 unset doIt
 
 . ~/.zshrc
+
+# powerline-shell for a pretty CLI
+# https://github.com/milkbikis/powerline-shell
+git clone git@github.com:milkbikis/powerline-shell.git ~/Code/powerline-shell
+cd ~/Code/powerline-shell
+./install.py
+ln -s /Users/grich/powerline-shell/powerline-shell.py ~/powerline-shell
+# fix powerline fonts. todo: programatically change iterm fonts?
+cd ~/Code
+git clone git@github.com:powerline/fonts.git
