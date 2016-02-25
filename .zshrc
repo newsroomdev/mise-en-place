@@ -73,4 +73,3 @@ disable r
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-source ~/oh-my-zsh.sh
