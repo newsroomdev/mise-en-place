@@ -1,5 +1,4 @@
 # Path to your oh-my-zsh configuration.
-ZSH=/Users/grich/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -37,7 +36,7 @@ ZSH_THEME="robbyrussell"
 # much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment following line if you want to the command execution time stamp shown 
+# Uncomment following line if you want to the command execution time stamp shown
 # in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
@@ -47,8 +46,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(brew colorize rails ruby git tmux zsh_reload)
 
-source $ZSH/oh-my-zsh.sh
-source ~/.bin/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
 # User configuration
 
@@ -72,9 +69,8 @@ export CSICOLOR=1
 export CLICOLOR=1
 export LSCOLORS=gxFxGxDxBxegedabagacad
 
-eval "$(rbenv init -)"
-eval "$(gh alias -s)"
 disable r
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+source ~/oh-my-zsh.sh
